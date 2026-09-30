@@ -161,12 +161,7 @@ if(desk){
   box.appendChild(f);
 })();
 
-/* ---------- SCRAMBLE ---------- */
-const chars='!<>-_\\/[]{}—=+*^?#________';
-function scramble(el){const o=el.textContent,st=performance.now();(function up(n){const e=n-st,pr=Math.min(e/700,1);let out='';for(let i=0;i<o.length;i++){const r=i/o.length;if(pr>=r+.3)out+=o[i];else out+=chars[Math.floor(Math.random()*chars.length)];}el.textContent=out;if(pr<1)requestAnimationFrame(up);else el.textContent=o;})(st);}
-const mo=new MutationObserver(ms=>ms.forEach(m=>{if(m.attributeName==='class'&&m.target.classList.contains('is-active'))m.target.querySelectorAll('[data-scramble]').forEach(s=>setTimeout(()=>scramble(s),400));}));
-pages.forEach(p=>mo.observe(p,{attributes:true}));
-setTimeout(()=>pages[cur].querySelectorAll('[data-scramble]').forEach(s=>scramble(s)),600);
+/* ---------- (scramble effect removed — clean static text) ---------- */
 
 /* ---------- CLOCK + LIVE + VIBE ---------- */
 function tick(){try{$('#clock').textContent=new Intl.DateTimeFormat('en-IN',{hour:'2-digit',minute:'2-digit',timeZone:'Asia/Kolkata'}).format(new Date());}catch(e){$('#clock').textContent=new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'});}}
@@ -193,7 +188,7 @@ function pressKey(k,clicked=false){
   $('#kbSub').textContent=desc;
   if(!found.has(k)){found.add(k);$('#kbCount').textContent=`${found.size} / 26 discovered`;
     if(found.size===26){try{confetti({particleCount:160,spread:80,origin:{y:.6}});}catch(e){}speak('You discovered all my skills. Amazing!');}}
-  if(voiceOn&&!clicked)speak(`${name}. ${desc}`);
+  if(voiceOn&&!clicked)speak(k==="Z"?"Zeba OS":`${name}. ${desc}`);
   else if(voiceOn&&clicked&&found.size%5===0)speak(name);
 }
 $('#kbReset').addEventListener('click',()=>{found.clear();$$('.key').forEach(k=>k.classList.remove('found'));$('#kbCount').textContent='0 / 26 discovered';});
