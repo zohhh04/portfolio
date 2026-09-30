@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Zeba Fathima | Full-Stack Developer (MERN × AI)</title>
+<meta name="description" content="Hi, I'm Zeba Fathima — Full-Stack Developer building MERN + AI products. Redora, Foodiq, CipherChat. ServiceNow CAD + CSA, PwC trained. Based in Hyderabad, open to internships & collaborations." />
+<meta name="author" content="Zeba Fathima" />
+<meta name="theme-color" content="#0a0a0f" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+<link rel="stylesheet" href="styles.css" />
+<script>
+(function(){var s=localStorage.getItem('theme');if(s==='light')document.documentElement.setAttribute('data-theme','light');})();
+</script>
+<style>
+#pageLoader{position:fixed;inset:0;background:#0a0a0f;z-index:99999;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:24px;transition:opacity .5s ease,visibility .5s ease}
+html[data-theme="light"] #pageLoader{background:#fafafc}
+#pageLoader.is-loaded{opacity:0;visibility:hidden;pointer-events:none}
+.pl-logo{width:64px;height:64px;border-radius:14px;background:linear-gradient(135deg,#a855f7,#22d3ee);display:flex;align-items:center;justify-content:center;color:#0a0a0f;font-family:'Space Grotesk',sans-serif;font-size:26px;font-weight:800;letter-spacing:-1px;animation:plPulse 1.4s ease-in-out infinite;box-shadow:0 0 40px rgba(168,85,247,.4)}
+.pl-dots{display:flex;gap:6px}
+.pl-dots span{width:6px;height:6px;border-radius:50%;background:#a855f7;animation:plDot 1.2s ease-in-out infinite}
+.pl-dots span:nth-child(2){animation-delay:.15s;background:#b375ed}
+.pl-dots span:nth-child(3){animation-delay:.3s;background:#22d3ee}
+@keyframes plPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+@keyframes plDot{0%,80%,100%{transform:scale(.6);opacity:.4}40%{transform:scale(1);opacity:1}}
+</style>
+</head>
+<body>
+
+<div id="pageLoader" aria-hidden="true">
+  <div class="pl-logo">ZF</div>
+  <div class="pl-dots"><span></span><span></span><span></span></div>
+</div>
+<script>
+window.addEventListener('load',function(){var l=document.getElementById('pageLoader');if(l){setTimeout(function(){l.classList.add('is-loaded');},250);setTimeout(function(){l.remove();},900);}});
+setTimeout(function(){var l=document.getElementById('pageLoader');if(l)l.classList.add('is-loaded');},4000);
+</script>
+
+<div class="scroll-progress" aria-hidden="true"><div class="scroll-progress-bar" id="scrollProgress"></div></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+  <i class="bi bi-sun-fill toggle-icon-sun"></i>
+  <i class="bi bi-moon-stars-fill toggle-icon-moon"></i>
+</button>
+
+<nav id="mainNav" class="navbar fixed-top custom-navbar">
+  <div class="container d-flex justify-content-between align-items-center">
+    <a class="navbar-brand" href="#" data-goto="0"><span class="brand-dot"></span><span class="brand-text">zeba<span class="brand-accent">.fathima</span></span></a>
+    <div class="d-flex align-items-center gap-2">
+      <span class="nav-live mono-font d-none d-md-inline-flex"><span class="status-dot"></span> Hyderabad · <span id="clock">--:--</span></span>
+      <a class="btn btn-primary-cta btn-sm" href="#" data-goto="4"><i class="bi bi-at"></i> Contact Me</a>
+    </div>
+  </div>
+</nav>
+
+<div class="global-bg" aria-hidden="true">
+  <div class="bg-grid"></div>
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+  <div class="bg-particles" id="particles"></div>
+  <div class="bg-circuit">
+    <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path class="circuit-path" d="M50,100 L300,100 L300,250 L600,250 L600,400 L900,400 L900,200 L1150,200" stroke="currentColor" stroke-width="1" fill="none" />
+      <path class="circuit-path circuit-path-2" d="M100,700 L400,700 L400,550 L700,550 L700,650 L1100,650" stroke="currentColor" stroke-width="1" fill="none" />
+      <circle class="circuit-node" cx="300" cy="100" r="3" fill="currentColor" />
+      <circle class="circuit-node" cx="600" cy="250" r="3" fill="currentColor" />
+      <circle class="circuit-node" cx="900" cy="400" r="3" fill="currentColor" />
+      <circle class="circuit-node" cx="400" cy="700" r="3" fill="currentColor" />
+      <circle class="circuit-node" cx="700" cy="550" r="3" fill="currentColor" />
+    </svg>
+  </div>
+</div>
+
+<div class="scroll-hint" id="scrollHint">
+  <span class="mono-font">scroll</span>
+  <div class="scroll-mouse"><div class="scroll-mouse-dot"></div></div>
+</div>
+
+<main class="fullpage" id="fullpage">
+
+  <!-- ============= 0 HERO ============= -->
+  <section class="page" data-section="0" id="hero">
+    <div class="page-content">
+      <div class="hero-split">
+        <div class="hero-left" data-anim="zoom-rotate">
+          <div class="bitmoji-wrap">
+            <div class="bitmoji-ring"></div>
+            <div class="bitmoji-ring bitmoji-ring-2"></div>
+            <div class="bitmoji-inner">
+              <img src="bitmoji.png" alt="Zeba Fathima portfolio avatar" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+              <div class="avatar-fallback" style="display:none;"><span class="avatar-initials">ZF</span></div>
+            </div>
+            <div class="float-badge float-badge-1" data-anim="float-in"><i class="bi bi-code-slash"></i></div>
+            <div class="float-badge float-badge-2" data-anim="float-in"><i class="bi bi-robot"></i></div>
+            <div class="float-badge float-badge-3" data-anim="float-in"><i class="bi bi-stars"></i></div>
+          </div>
+        </div>
+        <div class="hero-right">
+          <p class="hero-eyebrow mono-font" data-anim="slide-right"><span class="eyebrow-dash"></span><span data-scramble>FULL_STACK_DEVELOPER</span></p>
+          <h1 class="hero-greeting" data-anim="type-effect">
+            <span class="visually-hidden">Zeba Fathima — Full-Stack Developer in Hyderabad, India</span>
+            <span class="type-line" aria-hidden="true">hi, I'm <span class="hero-name">zeba</span><span class="type-cursor">|</span></span>
+          </h1>
+          <p class="hero-tagline mono-font" data-anim="blur-up"><span class="quote-mark">"</span>Building <span class="accent-text">MERN × AI</span> products that are useful &amp; meaningful<span class="quote-mark">"</span></p>
+          <p class="hero-desc" data-anim="blur-up">A full-stack developer at the intersection of <em>code</em>, <em>creativity</em> and <em>intelligent systems</em> — from AI blood-donor networks to encrypted chat.</p>
+          <div class="hero-cta" data-anim="stagger-up">
+            <a href="https://drive.google.com/file/d/1kiFrVD3xX687oJXBmtKtMLNH0XfOyf6f/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-secondary-cta stagger-item"><i class="bi bi-file-earmark-text"></i> View Resume</a>
+            <a href="#" data-goto="2" class="btn btn-secondary-cta stagger-item"><i class="bi bi-grid-1x2-fill"></i> View My Work</a>
+            <span class="cta-divider stagger-item"></span>
+            <div class="hero-socials stagger-item">
+              <a href="https://github.com/zohhh04" target="_blank" rel="noopener" class="social-link" aria-label="GitHub"><i class="bi bi-github"></i></a>
+              <a href="https://www.linkedin.com/in/zeba-fathima-a1822a338/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="d-flex flex-wrap gap-2" data-anim="slide-up-bounce">
+            <div class="status-pill mono-font"><span class="status-dot"></span> Open to work — let's build together</div>
+            <div class="status-pill mono-font status-ghost"><i class="bi bi-people"></i> <span id="liveCount">1</span>&nbsp;visiting now</div>
+          </div>
+          <div class="hero-mini-stats" data-anim="stagger-up">
+            <div class="stagger-item"><b>9.3</b><span>CGPA</span></div>
+            <div class="stagger-item"><b>4+</b><span>projects shipped</span></div>
+            <div class="stagger-item"><b>5</b><span>certifications</span></div>
+            <div class="stagger-item"><b>26</b><span>stack keys</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= 1 SKILLS / KEYBOARD ============= -->
+  <section class="page section-alt" data-section="1" id="skills">
+    <div class="page-content">
+      <div class="section-header text-center">
+        <p class="section-tag mono-font"><span class="tag-bracket">[</span> 01 / SKILLS <span class="tag-bracket">]</span></p>
+        <h2 class="section-title" data-glitch="Things I work with">Things I work with</h2>
+        <p class="section-subtitle">Full-stack skillset to help you ship real, fast, intelligent products.</p>
+        <p class="skills-hint mono-font"><i class="bi bi-keyboard-fill"></i> keys work only here — press A–Z or click / tap below</p>
+      </div>
+
+      <div class="kb-wrap">
+        <div class="kb-screen">
+          <span class="kb-label">KEYBOARD OUTPUT</span>
+          <div class="kb-readout" id="kbReadout">Press any key <b>A–Z</b> to explore my stack…</div>
+          <div class="kb-sub" id="kbSub">each key = a skill I actually ship with</div>
+        </div>
+        <div class="kb-toggles">
+          <button id="soundBtn" class="chip-btn on" type="button">🔊 sound: on</button>
+          <button id="kbVoiceBtn" class="chip-btn on" type="button">🎙 voice: on</button>
+          <span class="kb-count mono-font" id="kbCount">0 / 26 discovered</span>
+          <button id="kbReset" class="link-btn" type="button">reset</button>
+        </div>
+        <div class="keyboard" id="keyboard" aria-label="Interactive skill keyboard"></div>
+      </div>
+
+      <div class="stack-chips" id="stackGroups"></div>
+    </div>
+  </section>
+
+  <!-- ============= 2 PROJECTS ============= -->
+  <section class="page" data-section="2" id="projects">
+    <div class="page-content">
+      <div class="section-header text-center">
+        <p class="section-tag mono-font"><span class="tag-bracket">[</span> 02 / PROJECTS <span class="tag-bracket">]</span></p>
+        <h2 class="section-title" data-glitch="Featured projects">Featured projects</h2>
+        <p class="section-subtitle">Real products with auth, real-time features &amp; AI — click any card for details.</p>
+      </div>
+      <div class="row g-3 stagger-grid" id="projGrid"></div>
+      <div class="text-center mt-2">
+        <a href="https://github.com/zohhh04" class="btn btn-outline-cta btn-sm" target="_blank" rel="noopener"><i class="bi bi-github"></i> View all on GitHub <i class="bi bi-arrow-up-right ms-1"></i></a>
+      </div>
+    </div>
+
+    <div class="skill-popup" id="projModal" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="skill-popup-inner pm-inner">
+        <button class="skill-popup-close" id="pmClose" aria-label="Close"><i class="bi bi-x"></i></button>
+        <div class="pm-cover" id="pmCover">🩸</div>
+        <p class="pm-cat mono-font" id="pmCat"></p>
+        <h4 class="pm-name" id="pmName"></h4>
+        <p class="skill-popup-text" id="pmDesc"></p>
+        <div class="chips" id="pmTech"></div>
+        <div class="pm-hl" id="pmHl"></div>
+        <div class="pm-actions">
+          <a href="https://github.com/zohhh04" target="_blank" rel="noopener" class="btn btn-sm btn-primary-cta">View Code <i class="bi bi-box-arrow-up-right"></i></a>
+          <a href="#" data-goto="4" class="btn btn-sm btn-secondary-cta" id="pmWork">Work with me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= 3 CERTIFICATIONS ============= -->
+  <section class="page section-alt" data-section="3" id="certs">
+    <div class="page-content">
+      <div class="section-header text-center">
+        <p class="section-tag mono-font"><span class="tag-bracket">[</span> 03 / CERTIFIED <span class="tag-bracket">]</span></p>
+        <h2 class="section-title" data-glitch="Certified & trained">Certified &amp; trained</h2>
+        <p class="section-subtitle">The credentials behind the work — ServiceNow + PwC.</p>
+      </div>
+      <div class="row g-3" id="certList"></div>
+    </div>
+  </section>
+
+  <!-- ============= 4 CONTACT ============= -->
+  <section class="page page-contact" data-section="4" id="contact">
+    <div class="page-content">
+      <div class="row g-3 align-items-center">
+        <div class="col-lg-7">
+          <p class="section-tag mono-font"><span class="tag-bracket">[</span> 04 / CONTACT <span class="tag-bracket">]</span></p>
+          <h2 class="footer-title" data-glitch="Let's build together.">Let's build something <span class="hero-name">together</span>.</h2>
+          <p class="footer-sub">Have an idea, internship or hackathon team in mind? Drop a message — it lands straight in my inbox and I usually reply within a day 💌</p>
+          <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+            <input type="hidden" name="access_key" value="9241a0d4-5dba-46db-b3b0-3974655eb202" />
+            <input type="hidden" name="subject" value="New portfolio inquiry" />
+            <input type="hidden" name="from_name" value="Zeba Fathima Portfolio" />
+            <input type="checkbox" name="botcheck" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <div class="row g-2">
+              <div class="col-md-6"><label class="visually-hidden" for="contact-name">Your name</label><input type="text" id="contact-name" name="name" class="form-control" placeholder="Your name" autocomplete="name" minlength="2" maxlength="80" required /></div>
+              <div class="col-md-6"><label class="visually-hidden" for="contact-email">Your email</label><input type="email" id="contact-email" name="email" class="form-control" placeholder="you@example.com" autocomplete="email" required /></div>
+              <div class="col-12"><label class="visually-hidden" for="contact-message">Your message</label><textarea id="contact-message" name="message" class="form-control" rows="2" placeholder="Tell me about your project..." minlength="10" maxlength="2000" required></textarea></div>
+              <div class="col-12"><button type="submit" class="btn btn-primary-cta" id="contactSubmit"><span class="contact-submit-text">Send message</span><i class="bi bi-send ms-1"></i></button></div>
+              <div class="col-12"><div class="form-status" id="formStatus" role="status" aria-live="polite"></div></div>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-5">
+          <div class="footer-card">
+            <div class="footer-avatar mono-font">ZF</div>
+            <h3 class="footer-name">Zeba Fathima</h3>
+            <p class="footer-role mono-font">Full-Stack Developer · MERN × AI</p>
+            <p class="footer-bio">From Hyderabad, building AI-powered web apps with clean UI and real-time magic. Currently vibing on <span id="vibe">RAG chatbots</span> ✨</p>
+            <div class="chips mb-2" id="loveChips"></div>
+            <p class="footer-mail">Prefer email? <a href="mailto:zebafathima0406@gmail.com">zebafathima0406@gmail.com</a> <button class="copy-btn" id="copyMail" type="button" title="Copy email"><i class="bi bi-clipboard"></i></button></p>
+            <div class="footer-socials">
+              <a href="https://github.com/zohhh04" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+              <a href="https://www.linkedin.com/in/zeba-fathima-a1822a338/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="mailto:zebafathima0406@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
+              <a href="https://drive.google.com/file/d/1kiFrVD3xX687oJXBmtKtMLNH0XfOyf6f/view?usp=sharing" target="_blank" rel="noopener" aria-label="Resume"><i class="bi bi-file-earmark-text"></i></a>
+            </div>
+            <p class="copyright-strip mono-font small muted text-center mt-2">© <span id="copyrightYear">2026</span> Zeba Fathima · crafted with care</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div id="toast"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
